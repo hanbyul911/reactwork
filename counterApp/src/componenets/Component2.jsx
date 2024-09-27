@@ -1,7 +1,8 @@
-function Component2 ({num, str, student}) {
+function Component2 ({student}) {
   return (
     <>
-    <h2>{num} : {str} : {student.id} : {student.name} : {student.score} : {student.age}</h2>
+    <h2>{student.id} : {student.name} : {student.score} : 
+      {student.age} : {student.school}</h2>
     </>
   )
 }
