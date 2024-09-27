@@ -22,8 +22,7 @@ function App() {
     <>
       <Header />
       <TodoEditor
-        value={todo} str="test" bool={true}
-        number={200} todo={todo} changeTodo={changeTodo} addTodolist={addTodoList} todolist={todolist}
+        todo={todo} changeTodo={changeTodo} addTodolist={addTodoList} todolist={todolist}
       />
     </>
   );
