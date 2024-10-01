@@ -5,6 +5,19 @@
   text-align: center;
 }
 
+.navbar {
+  top : 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  margin: auto;
+}
+
+.link {
+  margin : 10px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

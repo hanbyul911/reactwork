@@ -26,7 +26,7 @@ const Home = () => {
       <h1>Movie App !</h1>
       {isLoading ? ("Loading ...") : 
                   <div>{movies.map(movie => 
-                    <Movie key={movie.id} title={movie.title}
+                    <Movie key={movie.id} id={movie.id} title={movie.title}
                     coverImage={movie.medium_cover_image}
                     summary={movie.summary}
                     genres={movie.genres}
