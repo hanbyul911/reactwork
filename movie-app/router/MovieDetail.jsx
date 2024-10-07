@@ -1,12 +1,15 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Cast from "../components/Cast";
-import '../css/style.css';
+import Cast from "../src/components/Cast";
+import "../css/style.css";
+import {change_title} from "../src/function/change_title";
 
 const MovieDetail = () => {
   let { movieid } = useParams();
   const [movie, setMovie] = useState({});
   let url = `https://yts.mx/api/v2/movie_details.json?movie_id=${movieid}&with_images=true&with_cast=true`;
+
+  change_title(`${movie.title} 영화 상세보기`)
 
   useEffect(() => {
     async function getMovie() {
@@ -33,10 +36,12 @@ const MovieDetail = () => {
         <div>
           {Array.isArray(movie.cast) &&
             movie.cast.map((actor, index) => (
-              <Cast key={index}
-              coverImage={actor.url_small_image}
-              characterName={actor.character_name}
-              name={actor.name} />
+              <Cast
+                key={index}
+                coverImage={actor.url_small_image}
+                characterName={actor.character_name}
+                name={actor.name}
+              />
             ))}
         </div>
         {/* {
